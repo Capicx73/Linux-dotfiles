@@ -1,0 +1,130 @@
+
+// Load with --config examples/2.jsonc
+// Note that you must replace the image path to an existing image to display it.
+
+{
+ "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+   
+    "logo": {
+  	"type": "auto",        
+        "source": "arch",      
+        "width": 15,        
+        "height": 20,        
+	"padding": {
+	    "top": 0,
+	    "left": 10,
+	    "right": 10
+	}
+    },
+
+
+    "display": {
+        "separator": " : "
+    },
+        
+
+
+    "modules": [
+//        "title",
+//        "separator",
+
+        {
+            "type": "kernel",
+            "format": "{sysname} [{release}]",
+            "key": "Kernel version",
+            "keyColor": "yellow"
+        },
+
+        {
+            "type": "os",
+            "format": "{pretty-name} [{version}]",
+            "key": "Operative system",
+            "keyColor": "yellow"
+	},
+
+        {
+            "type": "shell",
+            "format": "{process-name} [{version}]",
+            "key": "Shell",
+	    "keyColor": "yellow"
+        },
+        "break",
+
+        {
+            "type": "wm",
+            "format": "{pretty-name} [{version}] [{protocol-name}]",
+            "key": "Window manager",
+            "keyColor": "blue"
+        },
+
+        {
+            "type": "lm",
+            "format": "{service} [{version}]",
+            "key": "Login manager",
+            "keyColor": "blue"
+        },
+
+        {
+            "type": "terminal",
+            "format": "{pretty-name} [{version}]",
+            "key": "Terminal",
+            "keyColor": "blue"
+        },
+
+        "break",
+
+        {
+            "type": "chassis",
+            "format": "{type}",
+            "key": "Host",
+            "keyColor": "green"
+        },
+
+        {
+            "type": "cpu",
+            "key": "CPU",
+            "format": "{name}",
+            "keyColor": "green"
+        },
+
+        {
+            "type": "gpu",
+            "format": "{name}",
+            "key": "GPU",
+            "keyColor": "green"
+        },
+
+        {
+            "type": "memory",
+            "format": "{total} {percentage}",
+            "key": "RAM",
+            "keyColor": "green"
+        },
+
+        {
+            "type": "disk",
+            "format": "{size-total} [{filesystem}]",
+            "key": "Disk",
+            "keyColor": "green"
+        },
+
+        {
+            "type": "display",
+            "format": "27❞ {width}x{height} @{refresh-rate}",
+            "key": "Monitor",
+            "keyColor": "green"
+        },
+
+	"break",
+
+        {
+            "type": "uptime",
+            "format": "{hours}h {minutes}mins",
+            "key": "Uptime",
+            "keyColor": "blue"
+        },
+
+        "break",
+        "colors"
+    ]
+}
